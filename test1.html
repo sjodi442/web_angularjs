@@ -1,0 +1,23 @@
+<!-- angularjs ng-app, ngmodel, directive{{expression}}, ng-init, ng-repeat -->
+<!doctype html>
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+    <title>
+        belajar angularjs 1
+    </title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+    <!-- basic ng-mode, directive{{expression}} -->
+    <input type="text" ng-model="nama"><br />
+    Nama : {{nama}}
+    
+    <!-- basic ng-init, ng-repeat -->
+    <div ng-init="daftarnama=['jodi','mssj','anying']">
+        <ul>
+            <li ng-repeat="dn in daftarnama">{{dn}}</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div>
+filter: <input type="text" ng-model="fill">
+    <ul>
+            <li ng-repeat="dn in daftarnama.data | filter:fill | orderBy:'nama'">
+                nama: {{dn.nama | uppercase}} dari kota: {{dn.kota | lowercase}}
+            </li>
+        
+    </ul>
+</div>
+<!--<div>
+    {{daftarnama.data}}
+</div>-->

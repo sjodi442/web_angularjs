@@ -1,0 +1,38 @@
+<!-- angularjs ng-app, ngmodel, directive{{expression}}, ng-init, ng-repeat -->
+<!doctype html>
+<html ng-app="test3app">
+<head>
+    <meta charset="utf-8">
+    <title>
+        belajar angularjs 3
+    </title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+    
+    <!-- view -->
+    <div ng-controller="data_orang">
+        <!-- utk filter -->
+        filter: <input type="text" ng-model="fill">
+        <!-- list data ng-init + filter -->
+        <ul>
+            <li ng-repeat="dn in daftarnama | filter:fill | orderBy:'nama'">
+                nama: {{dn.nama | uppercase}} dari kota: {{dn.kota | lowercase}}
+            </li>
+        </ul>
+    </div>
+    
+    <!-- script controller -->
+    <script>
+        //module angular
+        var test = angular.module('test3app',[]);
+        //controller
+        test.controller('data_orang', function($scope){
+            $scope.daftarnama = [{nama: 'jodi', kota: 'surakarta'},
+                           {nama: 'irfan', kota: 'Jakarta'},
+                           {nama: 'tono', kota: 'semarang'}];
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- angularjs ng-app, ngmodel, directive{{expression}}, ng-init, ng-repeat -->
+<!doctype html>
+<html ng-app="testapp">
+<head>
+    <meta charset="utf-8">
+    <title>
+        belajar angularjs 5
+    </title>
+    <script type="text/javascript" src="js/angular.js"></script>
+</head>
+<body>
+    
+    <!-- view -->
+    <templateheader0></templateheader0>
+    
+    <script>
+        var test = angular.module('testapp', []);
+        test.directive('templateheader0', function(){
+           return{
+               templateUrl: 'http://localhost/belajarangular/template/header1.html',
+               restrict: 'E'
+           } 
+        });
+    </script>
+</body>
+</html>
