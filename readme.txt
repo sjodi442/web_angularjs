@@ -8,8 +8,3 @@ test6 : basic template controller (template: "template/controll6.html", built-in
 test7 : basic routing + add temp data on data
 test8 : basic http get json from other url
 test9 : basic factory -> function getdata from http + post data
-
-$scope.daftarnama.data.push({
-            nama: $scope.daftarbaru.nama,
-            kota: $scope.daftarbaru.kota
-        });
